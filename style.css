@@ -1,0 +1,361 @@
+/**
+ * Author: Daniel Gruber
+ *@copyright 2012 - Daniel Gruber
+*/
+
+html, body {
+	padding: 0;
+	margin: 0;
+	background: #f5f5f5;
+	color: #444;
+	font-family: Roboto, Arial;
+	font-size: 12pt;
+	height: 100%;
+	width: 100%;
+}
+
+#document {
+	min-height: 100%;
+	background: #fff;
+	position: relative;
+	width: 64em;
+	margin: auto;
+
+}
+
+a {
+	color: #4180f5;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	margin: .5em 0;
+}
+
+
+#google {
+	color: #fff;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 999;
+}
+#google a {
+	color: #fff !important;
+}
+#container {
+	height: 32em;
+	width: 100%;
+	background: url(images/background-desktop.jpg) no-repeat;
+	background-size: 64em 32em;
+	position: relative;
+	
+	color: #fff;
+}
+#container .content {
+	padding: 1.75em 4em;
+	padding-right: 26em;
+}
+#container .page-title {
+	
+}
+#container .page-title h1 {
+	margin: 0;
+	font-size: 3.75em;
+	font-weight: 100;
+}
+#container a {
+	color: #79c1ff;
+}
+#container p {
+	font-size: 1em;
+	font-weight: 300;
+}
+#container .links ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#container .links ul li {
+	margin: 0; 
+	padding: .625em 0;
+	font-size: 1.31em;
+	padding-left: 2.5em;
+	
+	background-repeat: no-repeat;
+	background-size: 2em 2em;
+	background-position: left center;
+}
+#container .links ul li.facebook {
+	background-image: url(images/facebook-white.png);
+}
+#container .links ul li.twitter {
+	background-image: url(images/twitter-white.png);
+}
+#container .links ul li.mail {
+	background-image: url(images/mail-white.png);
+}
+#container .links ul li.mail a span {
+	color: #fff;
+	font-size: .75em;
+	text-decoration: none;
+}
+
+
+#footer {
+	padding: 2em 3em;
+}
+
+#footer .right {
+	float: right;
+	font-size: 1.5em;
+	font-weight: 200;
+	margin: .69em 0;
+}
+#footer .work {
+	margin-right: 10em;
+}
+#footer .work .label {
+	padding: 1em 0;
+	clear: left;
+	border-left: 0;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	margin-top: 1em;
+	padding-top: 1em;
+	margin-left: 0em;
+	text-align: center;
+	color: #777;
+	font-size: 1.25em;
+	font-weight: 200;
+	float: none;
+	display: inline-block;
+}
+#footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#footer ul li {
+	float: left;
+	margin: 0 1em;
+	padding: 0;
+}
+#footer ul li a img {
+	height: 3em;
+	width: auto !important;
+}
+#footer ul li a span {
+	display: none;
+}
+
+
+@media only screen and (max-width: 50em) {
+	#document {
+		width: 48em;
+	}
+	#container {
+		height: 27em;
+		background-size: 54em 27em;
+	}
+	#container .page-title h1 {
+		font-size: 3.5em;
+	}
+	#container p {
+		font-size: .81em;
+		font-weight: 300;
+	}
+	#container .content {
+		padding-right: 16em;
+		padding-left: 3em;
+		padding-top: 1em;
+	}
+	#container .links ul li {
+		font-size: 1.125em;
+	}
+	
+	#footer ul li {
+		margin: .5em 1.5em;
+		width: 7em;
+		text-align: center;
+	}
+	#footer ul li a img {
+		height: 3.06em;
+	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+	#container {
+		background-image: url(images/background-desktop@2x.jpg) no-repeat;
+	}
+
+}
+
+@media only screen and (max-width: 38em) {
+	#document {
+		max-width: 30em;
+		width: 100%;
+	}
+	#container {
+		background: #fff;
+		color: #555;
+		height: auto;
+	}
+	
+	#container .links ul li.mail a span {
+		color: #999;
+	}
+	
+	#container .page-title {
+		max-width: 30em;
+		width: 100%;
+		height: 24em;
+		
+		background: url(images/background-mobile.jpg) no-repeat;
+		background-size: 30em 26.25em;
+		background-position: center bottom;
+		
+		margin: auto;
+		
+		position: relative;
+	}
+	
+	#container p {
+		font-size: 1em;
+		font-weight: 300;
+	}
+	
+	#container .page-title h1 {
+		color: #fff;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		
+		background: url(images/name-bg.png) repeat-x center top;
+	}
+	#container .content {
+		padding: 0;
+	}
+	#container .content .text, #container .links {
+		padding: .5em 1.5em;
+	}
+	
+	#container .links ul li.facebook {
+		background-image: url(images/facebook-black.png);
+	}
+	#container .links ul li.twitter {
+		background-image: url(images/twitter-black.png);
+	}
+	#container .links ul li.mail {
+		background-image: url(images/mail-black.png);
+	}
+	#container .links ul li {
+		font-size: 1.125em;
+	}
+	#container a {
+		color: #4180f5;
+	}
+	
+	
+	#footer {
+		padding: 0.5em 1.5em;
+		
+		padding-bottom: 5em;
+	}
+	
+	#footer .right {
+		font-weight: 300;
+		margin: .69em 0;
+		position: absolute;
+		right: 0;
+		bottom: .5em;
+		left: 0;
+		text-align: center;
+		font-size: 1em;
+	}
+	#footer .work {
+		margin-right: 0;
+		position: relative;
+		padding-top: 4em;
+	}
+	#footer .work .label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		border: 0;
+		margin: 0;
+		padding: .5em;
+		font-weight: 300;
+		border-bottom: 1px solid #ccc;
+	}
+	#footer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	#footer ul li {
+		float: none;
+		padding: 0;
+		margin: 0;
+		width: auto;
+		clear: left;
+		text-align: left;
+	}
+	#footer ul li a img {
+		height: 1.75em;
+		width: auto !important;
+		float: right;
+		margin-top: .75em;
+	}
+	#footer ul li a span {
+		display: inline-block;
+		padding: .75em 0;
+	}
+
+}
+
+@media only screen and (max-width: 22em) {
+	#document {
+		width: 20em;
+	}
+	#container {
+		background: #fff;
+		color: #555;
+	}
+	#container .page-title h1 {
+		font-size: 2.75em;
+	}
+	
+	#container .page-title {
+		width: 20em;
+		height: 16em;
+		background-size: 20em 17em;
+	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+	#container .page-title {
+		background-image: url(images/background-mobile@2x.jpg) no-repeat;
+	}
+
+}
