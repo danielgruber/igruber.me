@@ -1,2 +1,2 @@
 <?php
-shell_exec("git pull");
+echo shell_exec("/usr/bin/git pull 2>&1");
