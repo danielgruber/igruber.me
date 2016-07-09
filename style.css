@@ -43,20 +43,18 @@ p {
 	z-index: 999;
 }
 #google a {
-	color: #fff !important;
+	color: #000 !important;
 }
 #container {
-	height: 32em;
 	width: 100%;
-	background: url(images/background-desktop.jpg) no-repeat;
-	background-size: 64em 32em;
+	background: #555 url(images/daniel.jpg) no-repeat;
+	background-size: 100% auto;
 	position: relative;
-	
-	color: #fff;
 }
 #container .content {
 	padding: 1.75em 4em;
-	padding-right: 26em;
+	padding-right: 36em;
+	position: relative;
 }
 #container .page-title {
 	
@@ -65,13 +63,23 @@ p {
 	margin: 0;
 	font-size: 3.75em;
 	font-weight: 100;
+	color: #000;
 }
-#container a {
-	color: #79c1ff;
+#container .content .text {
+	padding: 1em;
+	margin: 1em 0;
+	max-width: 18em;
+	background: rgba(255, 255, 255, 0.7);
 }
 #container p {
 	font-size: 1em;
 	font-weight: 300;
+}
+#container .links {
+	position: absolute;
+	right: 2em;
+	top: 7em;
+	max-width: 15em;
 }
 #container .links ul {
 	list-style: none;
@@ -97,8 +105,11 @@ p {
 #container .links ul li.mail {
 	background-image: url(images/mail-white.png);
 }
-#container .links ul li.mail a span {
+#container .links ul li a {
 	color: #fff;
+}
+#container .links ul li.mail a span {
+	color: #ccc;
 	font-size: .75em;
 	text-decoration: none;
 }
@@ -156,10 +167,6 @@ p {
 	#document {
 		width: 48em;
 	}
-	#container {
-		height: 27em;
-		background-size: 54em 27em;
-	}
 	#container .page-title h1 {
 		font-size: 3.5em;
 	}
@@ -171,6 +178,12 @@ p {
 		padding-right: 16em;
 		padding-left: 3em;
 		padding-top: 1em;
+	}
+	#container .content .text {
+		max-width: 13em;
+	}
+	#container .links {
+		right: 0em;
 	}
 	#container .links ul li {
 		font-size: 1.125em;
@@ -195,7 +208,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
   
 	#container {
-		background-image: url(images/background-desktop@2x.jpg) no-repeat;
+		background-image: url(images/daniel@2x.jpg);
 	}
 
 }
@@ -218,11 +231,11 @@ only screen and (                min-resolution: 2dppx) {
 	#container .page-title {
 		max-width: 30em;
 		width: 100%;
-		height: 24em;
+		height: 18em;
 		
-		background: url(images/background-mobile.jpg) no-repeat;
-		background-size: 30em 26.25em;
-		background-position: center bottom;
+		background: url(images/daniel.jpg) no-repeat;
+		background-size: 100% auto;
+		background-position: center center;
 		
 		margin: auto;
 		
@@ -241,13 +254,13 @@ only screen and (                min-resolution: 2dppx) {
 		left: 0;
 		right: 0;
 		text-align: center;
-		
-		background: url(images/name-bg.png) repeat-x center top;
 	}
 	#container .content {
 		padding: 0;
 	}
 	#container .content .text, #container .links {
+		position: static;
+		max-width: 100%;
 		padding: .5em 1.5em;
 	}
 	
@@ -263,7 +276,7 @@ only screen and (                min-resolution: 2dppx) {
 	#container .links ul li {
 		font-size: 1.125em;
 	}
-	#container a {
+	#container a, #container .links ul li a {
 		color: #4180f5;
 	}
 	
@@ -325,6 +338,12 @@ only screen and (                min-resolution: 2dppx) {
 		padding: .75em 0;
 	}
 
+}
+
+@media only screen and (max-width: 28em) {
+ 	#container .page-title {
+ 		height: 15em;
+ 	}
 }
 
 @media only screen and (max-width: 22em) {
