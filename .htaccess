@@ -12,8 +12,6 @@ RewriteRule "^$"   "/index-bay.html" [L]
 RewriteCond %{HTTP_HOST}    =gruababua.de
 RewriteRule "^index.html"   "/index-bay.html" [L]
 
-RewriteRule "^index-bay.html"   "/" [R]
-
 RewriteCond %{HTTP_HOST}    !=localhost
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
