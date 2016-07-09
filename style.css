@@ -82,8 +82,8 @@ p {
 #container .links {
 	position: absolute;
 	right: 2em;
-	top: 7em;
-	max-width: 15em;
+	top: 9em;
+	max-width: 16em;
 }
 #container .links ul {
 	list-style: none;
