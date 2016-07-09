@@ -1,16 +1,18 @@
 RewriteEngine on
 
 RewriteCond %{HTTP_HOST}    =www.gruababua.de
-RewriteRule "^$"   "/index-bay.html" [L,R]
+RewriteRule "^$"   "/index-bay.html" [L]
 
 RewriteCond %{HTTP_HOST}    =gruababua.de
-RewriteRule "^index.html"   "/index-bay.html" [L,R]
+RewriteRule "^index.html"   "/index-bay.html" [L]
 
 RewriteCond %{HTTP_HOST}    =gruababua.de
-RewriteRule "^$"   "/index-bay.html" [L,R]
+RewriteRule "^$"   "/index-bay.html" [L]
 
 RewriteCond %{HTTP_HOST}    =gruababua.de
-RewriteRule "^index.html"   "/index-bay.html" [L,R]
+RewriteRule "^index.html"   "/index-bay.html" [L]
+
+RewriteRule "^index-bay.html"   "/" [R]
 
 RewriteCond %{HTTP_HOST}    !=localhost
 RewriteCond %{HTTPS} !=on
