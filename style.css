@@ -14,6 +14,10 @@ html, body {
 	width: 100%;
 }
 
+* {
+	line-height: 1.25em;
+}
+
 #document {
 	min-height: 100%;
 	background: #fff;
@@ -181,6 +185,7 @@ p {
 	}
 	#container .content .text {
 		max-width: 13em;
+		margin-bottom: 0;
 	}
 	#container .links {
 		right: 0em;
