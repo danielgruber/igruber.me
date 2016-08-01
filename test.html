@@ -1,20 +1,34 @@
+<script type="text/javascript">
+var storeLink = "https://play.google.com/store/apps/details?id=com.docuware.mobile";
+var storeTimeout;
+var storeTimeoutStarted;
+var openAppStoreDelayed = function() {
+	storeTimeoutStarted = (new Date()).getTime();
+	storeTimeout = setTimeout(function(){
+		if((new Date()).getTime() - storeTimeoutStarted < 500) {
+			location.href = storeLink;
+		}
+	}, 300);
+};
+</script>
+
 Fire up DWMobile: 
 <ul>
 	<li><a href="dwmobile://">dwmobile://</a></li>
 	<li><a href="dwmobile://test">dwmobile://test</a></li>
 	<li><a href="dwmobile://search">dwmobile://search</a></li>
 	<li><strong>For the following use julian.frielinghaus with PaperOrganizer Organisation</strong></li>
-	<li><a href="dwmobile://Integration?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&q=W0NPTVBBTlldPSJ0ZXN0Y29tcGFueSI%3D">dwmobile://Integration?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&q=W0NPTVBBTlldPSJ0ZXN0Y29tcGFueSI%3D</a></li>
-	<li><a href="dwmobile://Integration/1628?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&host=docuware-online.de&org=PaperOrganizer">dwmobile://Integration/1628?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&host=docuware-online.de&org=PaperOrganizer</a></li>
+	<li><a onclick="openAppStoreDelayed();" href="dwmobile://Integration?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&q=W0NPTVBBTlldPSJ0ZXN0Y29tcGFueSI%3D">dwmobile://Integration?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&q=W0NPTVBBTlldPSJ0ZXN0Y29tcGFueSI%3D</a></li>
+	<li><a onclick="openAppStoreDelayed();" href="dwmobile://Integration/1628?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&host=docuware-online.de&org=PaperOrganizer">dwmobile://Integration/1628?rl=5f8dc706-4f35-4961-ac70-dee5f9c86dd5&p=RLV&sed=f420485a-cab8-46bd-bfad-c12224f32feb&host=docuware-online.de&org=PaperOrganizer</a></li>
 	<li><a href="https://docuware-online.de/DocuWare/Platform/WebClient/1628/Integration?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V">https://docuware-online.de/DocuWare/Platform/WebClient/1628/Integration?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V</a></li>
-	<li><a href="dwmobile://Integration/1628?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V&host=docuware-online.de&org=PaperOrganizer">dwmobile://Integration/1628?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V&host=docuware-online.de&org=PaperOrganizer</a></li>
+	<li><a onclick="openAppStoreDelayed();" href="dwmobile://Integration/1628?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V&host=docuware-online.de&org=PaperOrganizer">dwmobile://Integration/1628?fc=e61f8271-02ce-4e33-98a4-420c1c10aae5&did=11&p=V&host=docuware-online.de&org=PaperOrganizer</a></li>
 	<li><strong>192.168.0.152</strong></li>
-	<li>Liste an WFs: <a href="dwmobile://Integration?wid=d80cf62c-536d-4226-b53f-e3fd52da7c46&wrt=d&p=WFTL">dwmobile://Integration?wid=d80cf62c-536d-4226-b53f-e3fd52da7c46&wrt=d&p=WFTL</a></li>
-	<li>Task: <a href="dwmobile://Integration?p=WFST&wiid=344c54e9-aa6c-49ab-a42e-691a2a95092c&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620">dwmobile://Integration?p=WFST&wiid=344c54e9-aa6c-49ab-a42e-691a2a95092c&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620</a></li>
-	<li>Task: <a href="dwmobile://Integration?p=WFTL&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620&wrt=d">dwmobile://Integration?p=WFTL&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620&wrt=d</a></li>
+	<li>Liste an WFs: <a onclick="openAppStoreDelayed();" href="dwmobile://Integration?wid=d80cf62c-536d-4226-b53f-e3fd52da7c46&wrt=d&p=WFTL">dwmobile://Integration?wid=d80cf62c-536d-4226-b53f-e3fd52da7c46&wrt=d&p=WFTL</a></li>
+	<li>Task: <a onclick="openAppStoreDelayed();" href="dwmobile://Integration?p=WFST&wiid=344c54e9-aa6c-49ab-a42e-691a2a95092c&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620">dwmobile://Integration?p=WFST&wiid=344c54e9-aa6c-49ab-a42e-691a2a95092c&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620</a></li>
+	<li>Task: <a onclick="openAppStoreDelayed();" href="dwmobile://Integration?p=WFTL&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620&wrt=d">dwmobile://Integration?p=WFTL&wid=f4733f10-dce8-4ca6-b523-f2b9a954f620&wrt=d</a></li>
 	<li><strong>Mobile@DocuWare Inc.</strong></li>
-	<li><a href="dwmobile://docuware-online.de/DocuWare/Platform/WebClient/518/Integration?rl=475c3829-78c6-4dd5-8840-ac3c0ddc0bc4&p=RLV">dwmobile://docuware-online.de/DocuWare/Platform/WebClient/518/Integration?rl=475c3829-78c6-4dd5-8840-ac3c0ddc0bc4&p=RLV</a></li>
-	<li><a href="
+	<li><a onclick="openAppStoreDelayed();" href="dwmobile://docuware-online.de/DocuWare/Platform/WebClient/518/Integration?rl=475c3829-78c6-4dd5-8840-ac3c0ddc0bc4&p=RLV">dwmobile://docuware-online.de/DocuWare/Platform/WebClient/518/Integration?rl=475c3829-78c6-4dd5-8840-ac3c0ddc0bc4&p=RLV</a></li>
+	<li><a onclick="openAppStoreDelayed();" href="
 dwmobile://192.168.1.88/DocuWare/Platform/WebClient/1/Integration?&ep=gk8uZxa8Yzx5oP257HsCyeQPo9NsCr6Q_BbNoV2zMilg37cSULb26C54uPeJsWWxxfHMD1p-gyeW__P_ZMjxpXDI0OFPL6AZj1y757O7AWcJjie9R39n-VQQfbtj7IPL0">
 dwmobile://192.168.1.88/DocuWare/Platform/WebClient/1/Integration?&ep=gk8uZxa8Yzx5oP257HsCyeQPo9NsCr6Q_BbNoV2zMilg37cSULb26C54uPeJsWWxxfHMD1p-gyeW__P_ZMjxpXDI0OFPL6AZj1y757O7AWcJjie9R39n-VQQfbtj7IPL0</a></li>
 </ul>
